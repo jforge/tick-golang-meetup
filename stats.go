@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"strconv"
 	"encoding/json"
+	"math/rand"
 )
 
 const STATS_PORT = 3000
@@ -27,8 +28,10 @@ func main() {
 			Value float64 `json:"value"`
 		}{
 			"service",
-			0.5,
+			rand.Float64(),
 		})
+
+		log.Println("new stats: ", string(body))
 
 		res.Write([]byte(body))
 	})
