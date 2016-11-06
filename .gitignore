@@ -25,12 +25,12 @@ _testmain.go
 *.test
 *.prof
 
-.idea
+.idea/
 
-chronograf
+chronograf/
 !chronograf/README.md
-influxdb
+influxdb/
 !influxdb/README.md
-kapacitor
+kapacitor/
 !kapacitor/cpu_alert.tick
 !kapacitor/kapacitor.conf
