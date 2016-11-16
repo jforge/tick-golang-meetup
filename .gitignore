@@ -32,5 +32,5 @@ chronograf/
 influxdb/
 !influxdb/README.md
 kapacitor/
-!kapacitor/cpu_alert.tick
+!kapacitor/tasks/
 !kapacitor/kapacitor.conf
