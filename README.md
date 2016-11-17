@@ -13,18 +13,13 @@ You can watch the live streaming record on Youtube (**in italian**): [live strea
 $ docker-compose up -d
 ```
 
-### Add the cpu_alert task
+### Add the cpu_alert task and enable it
 ```bash
 $ docker-compose run kapacitor-cli
 $ kapacitor define cpu_alert -type stream -tick /var/lib/kapacitor/tasks/cpu_alert.tick -dbrp kapacitor_example.autogen
+$ kapacitor enable cpu_alert
 ```
 
-Now, test the cpu_alert task (remember to save the returned id):
-
-```bash
-$ kapacitor record stream -task cpu_alert -duration 20s
-$ <randomid>
-$ kapacitor replay -recording <randomid> -task cpu_alert
-```
 
 You should see a new log into the `kapacitor` folder called `alerts.log`
+the directory is /var/lib/kapacitor/alerts.log defined in tick
