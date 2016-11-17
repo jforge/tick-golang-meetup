@@ -21,5 +21,10 @@ $ kapacitor enable cpu_alert
 ```
 
 
-You should see a new log into the `kapacitor` folder called `alerts.log`
-the directory is /var/lib/kapacitor/alerts.log defined in tick
+You should see a new log into the `kapacitor` folder called `alerts.log`  
+the directory is  
+
+```
+/var/lib/kapacitor/alerts.log
+```
+defined in tick  
